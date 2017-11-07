@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_notes"
+    style="@style/AppTheme.Card.Margins"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_picture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:foregroundGravity="center"/>
+
+            <LinearLayout
+                android:id="@+id/layout_partner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical|start"
+                android:paddingBottom="@dimen/margin_normal">
+
+                <TextView
+                    android:id="@+id/tv_item_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_large"
+                    android:paddingRight="@dimen/margin_large"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold"
+                    tools:text="Title"/>
+
+                <TextView
+                    android:id="@+id/tv_item_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_normal"
+                    android:paddingLeft="@dimen/margin_large"
+                    android:paddingRight="@dimen/margin_large"
+                    android:paddingTop="@dimen/margin_large"
+                    android:textSize="@dimen/text_size_large"
+                    android:textColor="#555555"
+                    android:textStyle="italic"
+                    tools:text="Content"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_item_alarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/margin_normal"
+                android:paddingLeft="@dimen/margin_large"
+                android:paddingRight="@dimen/margin_large"
+                android:paddingTop="@dimen/margin_small"
+                android:textSize="@dimen/text_size_normal"
+                tools:text="11:11"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+</android.support.v7.widget.CardView>

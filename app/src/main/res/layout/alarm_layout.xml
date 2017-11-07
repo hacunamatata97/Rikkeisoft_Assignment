@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/alarmIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|bottom|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:contentDescription="Alarm"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:src="@drawable/ic_alarm_select_24dp"/>
+
+    <LinearLayout
+        android:id="@+id/alarmBackLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/alarmIcon"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <Spinner
+            android:id="@+id/alarmDateSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|bottom|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"/>
+
+        <Spinner
+            android:id="@+id/alarmTimeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|bottom|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|fill_horizontal|center|fill|start|end"
+            android:background="#ffffff"
+            android:contentDescription="Cancel"
+            android:onClick="disableAlarm"
+            android:src="@drawable/ic_cancel_black_24dp"
+            android:tint="@color/colorWhite"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alarmFrontLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/alarmIcon"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|bottom|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:background="#ffffff"
+            android:gravity="top|bottom|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:onClick="enableAlarm"
+            android:text="@string/alarm"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/font_size_normal"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
